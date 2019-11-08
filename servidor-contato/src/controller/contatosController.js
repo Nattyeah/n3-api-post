@@ -17,12 +17,12 @@ const add = (request, response) => {
   if (!contato.nome || !contato.dataNascimento || !contato.celular) {
     response.status(400).send("Dados inválidos");
   } else {
-    if (baseDados.find(dado => dado.nome === contato.nome)) {
-      response.status(400).send("Contato já cadastrado")
-    } else {
-      model.agenda.contatos.push(contato)
-      response.status(201).send(contato)
-    }
+    // if (baseDados.find(dado => dado.nome === contato.nome)) {
+    //   response.status(400).send("Contato já cadastrado")
+    // } else {
+    //   model.agenda.contatos.push(contato)
+    //   response.status(201).send(contato)
+    // }
   }
 
 }
